@@ -1,66 +1,44 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Zadanie Laravel:
+Wersja PHP min. 8.0
+Stworzyć prosty projekt – listę zadań dla użytkowników - w Laravelu umożliwiający:
+Część 1:
+1. Rejestrację użytkownika wraz z potwierdzeniem adresu email w linku
+2. Logowanie zarejestrowanego użytkownika
+3. Wyświetlanie listy zadań do wykonania (indywidualna per użytkownik) wraz z możliwością
+wyszukiwania po tytule, szczegółach i dacie (deadline) (za pomocą ajax, przetwarzanie server side).
+4. Rozwinięcie szczegółów zadania ( na tej samej podstronie, ajax)
+5. Możliwość oznaczania zadania jako wykonane / niewykonane (na tej samej podstronie, ajax)
+6. Możliwość filtrowania zadań (pokaż tylko wykonane / niewykonane / wszystkie), (na tej samej
+podstronie, ajax, przetwarzanie server side)
+7. Możliwość edycji/dodawania zadania na osobnej podstronie (wraz z walidacją – czy zadanie ma
+tytuł / szczegóły / datę (deadline))
+8. Wylogowywanie
+Część 2:
+1. Zainstalować paczkę Laravel Route Attributes (https://github.com/spatie/laravel-route-attributes)
+i korzystając z niej przerobić routing tak, aby był za pomocą mechanizmu atrybutów.
+2. Ustawienie zadania jako wykonane ma wysyłać maila do użytkonika z informacją, że zadanie
+wykonane.
+3. Wszystkie akcje usera (logowanie, rejestracja, wylogowanie, nieudane logowanie) mają być
+logowane w bazie danych
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Założenia:
+1. Zadanie do napisania w Laravelu, wersja najnowsza dostępna
+2. Front do napisania w dowolnej technologii (przeferowana Inertia+Vue lub Blade, niedozwolone
+Livewire, jeśli chodzi o wygląd (style etc.) można skorzystać z gotowej biblioteki np. Bootstrap lub
+Tailwind CSS)
+3. Dla ajaxa w JavaScripcie używać fetch lub axios
+4. W przypadku nieudanej walidacji backend ma zwracać 422 i komunikaty walidacyjne, które mają
+się pojawić pod polami np. „To pole nie może być puste”
+5. Projekt ma być zabezpieczony przed działaniem na danych innych userów za pomocą Policies
+lub Gates
+6. Projekt ma mieć walidację za pomocą FormRequests
+7. Logika działania na danych powinna być w Modelach lub Serwisach, Kontrollery powinny być
+jak najmniejsze
+8. Maile wysyłany za pomocą Mailable, wysyłany na wykonanie odpowiednich eventów
+(Rejestracja, Oznaczenie zadania jako wykonane) za pomocą Event Listenera lub Event Subscribera
+9. Logowanie akcji usera z punktu 3 części 2 też ma być wykonane na zasanie emitowania
+odpowiednich eventów i łapania ich za pomocą Event Listenera lub Event Subscribera
+10. Projekt ma być przygotowany na wielojęzyczność (np. brak zhardkodowanych komunikatów i
+tekstów, mają być brane z plików translacyjnych)
+11. Napisane pliki php mają używać strict_types, a w metodach zawsze ma być typ argumentu i typ
+zwracany (w wersji 8.0 zawsze da się określić typ)
