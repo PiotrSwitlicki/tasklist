@@ -1,7 +1,11 @@
 Zadanie Laravel:
+
 Wersja PHP min. 8.0
+
 Stworzyć prosty projekt – listę zadań dla użytkowników - w Laravelu umożliwiający:
+
 Część 1:
+
 1. Rejestrację użytkownika wraz z potwierdzeniem adresu email w linku
 2. Logowanie zarejestrowanego użytkownika
 3. Wyświetlanie listy zadań do wykonania (indywidualna per użytkownik) wraz z możliwością
@@ -13,7 +17,9 @@ podstronie, ajax, przetwarzanie server side)
 7. Możliwość edycji/dodawania zadania na osobnej podstronie (wraz z walidacją – czy zadanie ma
 tytuł / szczegóły / datę (deadline))
 8. Wylogowywanie
+
 Część 2:
+
 1. Zainstalować paczkę Laravel Route Attributes (https://github.com/spatie/laravel-route-attributes)
 i korzystając z niej przerobić routing tak, aby był za pomocą mechanizmu atrybutów.
 2. Ustawienie zadania jako wykonane ma wysyłać maila do użytkonika z informacją, że zadanie
@@ -22,6 +28,7 @@ wykonane.
 logowane w bazie danych
 
 Założenia:
+
 1. Zadanie do napisania w Laravelu, wersja najnowsza dostępna
 2. Front do napisania w dowolnej technologii (przeferowana Inertia+Vue lub Blade, niedozwolone
 Livewire, jeśli chodzi o wygląd (style etc.) można skorzystać z gotowej biblioteki np. Bootstrap lub
